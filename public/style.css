@@ -1,0 +1,33 @@
+h2 {
+  color: gold;
+}
+/* .all-data {
+  border: 1px solid rgb(195, 185, 185);
+  border-radius: 15px;
+  margin-bottom: 5px;
+  padding: 0 0 0 10px;
+} */
+
+table,
+thead,
+tr,
+td {
+  border: 1px solid black;
+}
+.add-user {
+  background-color: #3588c3;
+  text-align: center;
+  width: 20%;
+  height: 30px;
+}
+.form {
+  display: flex;
+  padding: 5px;
+  justify-content: flex-end;
+}
+.edit-user {
+  background-color: #3588c3;
+}
+.delete-user {
+  background-color: red;
+}

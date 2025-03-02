@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Data</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>All users Data</h1>
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+      </thead>
+      <% for(let i of data) {%>
+      <tr>
+        <td><%= i.ID%></td>
+        <td><%= i.USERNAME%></td>
+        <td><%= i.EMAIL%></td>
+        <td>
+          <form action="/user/<%=i.ID%>/edit" method="get">
+            <button class="edit-user">EDIT</button>
+          </form>
+        </td>
+        <td>
+          <form
+            action="/user/<%=i.ID%>?_method=DELETE"
+            method="post"
+            class="delete-btn"
+          >
+            <button class="delete-user">DELETE</button>
+          </form>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+    <br />
+    <form action="/user/add" method="get" class="form">
+      <button class="add-user">Add User</button>
+    </form>
+  </body>
+</html>
